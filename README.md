@@ -33,6 +33,14 @@ or to add it with all the settings use the following code:
 
 Once the plugin is setup you must now tell it when to fade out. You can do this by setting up a handler in `index.html` for the [`deviceready`](http://cordova.apache.org/docs/en/6.x/cordova/events/events.html#deviceready) event.
 
+**NOTE**:
+`StoryboardName` must match the name of your "Launch Screen File" in Xcode,  or a null-pointer exception will follow.
+If your `StoryboardName` is not `LaunchScreen`, you must specify the following preference in your `config.xml`:
+
+```xml
+<preference name="StoryboardName" value="YOUR_STORY_BOARD_NAME" />
+```
+
 Something like the following should work:
 ```js
 document.addEventListener("deviceready", function() {
