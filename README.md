@@ -60,9 +60,9 @@ This will only instantiate the top level view controller in the storyboard.
 
 These are the javascript APIs exposed off of the `window.LaunchScreen` object.
 
-- **`hide( callback )`** - Hides the launch screen. Usually called in the `deviceready` event handler. The `callback` is called after the launch screen is fully hidden.
+- **`hide( callback )`** - Hides the launch screen. Usually called in the `deviceready` event handler. The `callback` is called after the launch screen is fully hidden. `callback` has an `error` param which will be `null` or an error object if an error occurred.
 
-- **`show()`** - Shows the launch screen. Should never need to be called in practice.
+- **`show( callback )`** - Shows the launch screen. Should never need to be called in practice. The `callback` is called after the launch screen is fully visible. `callback` has an `error` param which will be `null` or an error object if an error occurred.
 
 # Supported Platforms
 - iOS

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
   id="cordova-plugin-launchscreen-storyboard"
-  version="1.0.0">
+  version="1.0.1">
   <name>LaunchScreenStoryboard</name>
   <description>Cordova LaunchScreen Storyboard Plugin</description>
   <license>MIT</license>
