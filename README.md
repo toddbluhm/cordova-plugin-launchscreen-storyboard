@@ -5,6 +5,8 @@
 # cordova-plugin-launchscreen-storyboard
 A cordova plugin for using a launch screen storyboard as the splashscreen instead of an image
 
+**Note: This plugin has become somewhat useless now that `cordova-ios` requires that you use their built-in launch screen image solution.**
+
 # Installation
 `cordova plugin add cordova-plugin-launchscreen-storyboard`
 
