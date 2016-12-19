@@ -32,7 +32,7 @@ The following preferences can be configured:
 
 **NOTE**:
 `StoryboardName` must match the name of your "Launch Screen File" in Xcode,  or a null-pointer exception will follow.
-If your `StoryboardName` is not `LaunchScreen`, you must specify the following preference in your `config.xml`:
+If your `StoryboardName` is not `LaunchScreen`, you *must* specify it in your `config.xml`.
 
 Once the plugin is setup you must now tell it when to fade out. You can do this by setting up a handler in `index.html` for the [`deviceready`](http://cordova.apache.org/docs/en/6.x/cordova/events/events.html#deviceready) event.
 
