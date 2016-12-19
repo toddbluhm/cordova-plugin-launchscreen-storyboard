@@ -22,15 +22,12 @@ Add the following code to your `config.xml` to get the plugin with default setti
 <plugin name="cordova-plugin-launchscreen-storyboard" spec="~1.0.0" />
 ```
 
-or to add it with all the settings use the following code:
+The following preferences can be configured:
 
 ```xml
-<feature name="LaunchScreen">
-  <param name="ios-package" value="LaunchScreenStoryboard" onload="true" />
-  <preference name="StoryboardName" value="LaunchScreen" />
-  <preference name="FadeOut" value="true" />
-  <preference name="FadeOutDuration" value="0.5" />
-</feature>
+<preference name="StoryboardName" value="LaunchScreen" />
+<preference name="FadeOut" value="true" />
+<preference name="FadeOutDuration" value="0.5" />
 ```
 
 Once the plugin is setup you must now tell it when to fade out. You can do this by setting up a handler in `index.html` for the [`deviceready`](http://cordova.apache.org/docs/en/6.x/cordova/events/events.html#deviceready) event.
