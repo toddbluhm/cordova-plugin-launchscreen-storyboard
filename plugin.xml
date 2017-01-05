@@ -19,9 +19,6 @@
     <config-file target="config.xml" parent="/*">
       <feature name="LaunchScreen">
         <param name="ios-package" value="LaunchScreenStoryboard" onload="true" />
-        <preference name="StoryboardName" value="LaunchScreen" />
-        <preference name="FadeOut" value="true" />
-        <preference name="FadeOutDuration" value="0.5" />
       </feature>
     </config-file>
 

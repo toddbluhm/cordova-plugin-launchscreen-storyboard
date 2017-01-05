@@ -22,26 +22,19 @@ Add the following code to your `config.xml` to get the plugin with default setti
 <plugin name="cordova-plugin-launchscreen-storyboard" spec="~1.0.0" />
 ```
 
-or to add it with all the settings use the following code:
-
-```xml
-<feature name="LaunchScreen">
-  <param name="ios-package" value="LaunchScreenStoryboard" onload="true" />
-  <preference name="StoryboardName" value="LaunchScreen" />
-  <preference name="FadeOut" value="true" />
-  <preference name="FadeOutDuration" value="0.5" />
-</feature>
-```
-
-Once the plugin is setup you must now tell it when to fade out. You can do this by setting up a handler in `index.html` for the [`deviceready`](http://cordova.apache.org/docs/en/6.x/cordova/events/events.html#deviceready) event.
-
-**NOTE**:
-`StoryboardName` must match the name of your "Launch Screen File" in Xcode,  or a null-pointer exception will follow.
-If your `StoryboardName` is not `LaunchScreen`, you must specify the following preference in your `config.xml`:
+The following preferences can be configured:
 
 ```xml
 <preference name="StoryboardName" value="YOUR_STORY_BOARD_NAME" />
+<preference name="FadeOut" value="true" />
+<preference name="FadeOutDuration" value="0.5" />
 ```
+
+**NOTE**:
+`StoryboardName` must match the name of your "Launch Screen File" in Xcode,  or a null-pointer exception will follow.
+If your `StoryboardName` is not `LaunchScreen`, you *must* specify it in your `config.xml`.
+
+Once the plugin is setup you must now tell it when to fade out. You can do this by setting up a handler in `index.html` for the [`deviceready`](http://cordova.apache.org/docs/en/6.x/cordova/events/events.html#deviceready) event.
 
 Something like the following should work:
 ```js
