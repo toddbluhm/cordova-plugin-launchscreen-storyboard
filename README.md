@@ -3,9 +3,9 @@
 [![npm](https://img.shields.io/npm/l/cordova-plugin-launchscreen-storyboard.svg?maxAge=2592000)](https://www.npmjs.com/package/cordova-plugin-launchscreen-storyboard)
 
 # cordova-plugin-launchscreen-storyboard
-A cordova plugin for using a launch screen storyboard as the splashscreen instead of an image
+A cordova plugin for using a launch screen storyboard as the splash screen instead of an image
 
-**Note: This plugin has become somewhat useless now that `cordova-ios` requires that you use their built-in launch screen image solution.**
+A common use case for this plugin is to control the default `CDVLaunchScreen` storyboard launch screen.
 
 # Installation
 `cordova plugin add cordova-plugin-launchscreen-storyboard`
@@ -19,7 +19,7 @@ or via github
 
 Add the following code to your `config.xml` to get the plugin with default settings:
 ```xml
-<plugin name="cordova-plugin-launchscreen-storyboard" spec="~1.0.0" />
+<plugin name="cordova-plugin-launchscreen-storyboard" spec="~2.0.0" />
 ```
 
 The following preferences can be configured:
@@ -31,8 +31,8 @@ The following preferences can be configured:
 ```
 
 **NOTE**:
-`StoryboardName` must match the name of your "Launch Screen File" in Xcode,  or a null-pointer exception will follow.
-If your `StoryboardName` is not `LaunchScreen`, you *must* specify it in your `config.xml`.
+`StoryboardName` must match the name of your "Launch Screen File" in Xcode, or a null-pointer exception will follow.
+If your `StoryboardName` is not `CDVLaunchScreen`, you *must* specify it in your `config.xml`.
 
 Once the plugin is setup you must now tell it when to fade out. You can do this by setting up a handler in `index.html` for the [`deviceready`](http://cordova.apache.org/docs/en/6.x/cordova/events/events.html#deviceready) event.
 
@@ -45,7 +45,7 @@ document.addEventListener("deviceready", function() {
 
 # Preferences
 - **`StoryboardName`** - The name of the storyboard that contains your launch screen view controller.
-This will only instantiate the top level view controller in the storyboard.
+This will only instantiate the top level view controller in the storyboard. (Default: `CDVLaunchScreen`)
 
 - **`FadeOut`** - Enable/Disable the view fading out when its told to `hide()`. This uses an EaseOut function.
 
@@ -61,3 +61,12 @@ These are the javascript APIs exposed off of the `window.LaunchScreen` object.
 
 # Supported Platforms
 - iOS
+
+## Contributors
+
+- Daniel Cousens
+
+## Contributing Guide
+I welcome all pull requests. Before opening a PR please make sure to run the following script if you have modified any js files:
+
+- `npm run lint` checks for code errors and formats according to [js-standard](https://github.com/feross/standard)

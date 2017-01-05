@@ -7,7 +7,7 @@
 #import "LaunchScreenStoryboard.h"
 #import <Cordova/CDVViewController.h>
 
-#define kDefaultStoryboardName @"LaunchScreen"
+#define kDefaultStoryboardName @"CDVLaunchScreen"
 #define kDefaultFadeOut YES
 #define kDefaultFadeOutDuration 0.5f
 
@@ -25,14 +25,14 @@
   if (_storyboardName == nil) {
     _storyboardName = kDefaultStoryboardName;
   }
-  
+
   NSString* fadeOut = [self settingForKey:@"FadeOut"];
   if (fadeOut == nil) {
     _performFadeOut = YES;
   } else {
     _performFadeOut = [fadeOut boolValue];
   }
-  
+
   NSString* fadeOutDuration = [self settingForKey:@"FadeOutDuration"];
   if (fadeOutDuration == nil) {
     _fadeOutDuration = kDefaultFadeOutDuration;
