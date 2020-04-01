@@ -2,7 +2,9 @@
 [![npm](https://img.shields.io/npm/dm/cordova-plugin-launchscreen-storyboard.svg?maxAge=86400)](https://www.npmjs.com/package/cordova-plugin-launchscreen-storyboard)
 [![npm](https://img.shields.io/npm/l/cordova-plugin-launchscreen-storyboard.svg?maxAge=2592000)](https://www.npmjs.com/package/cordova-plugin-launchscreen-storyboard)
 
-# cordova-plugin-launchscreen-storyboard
+**🚨 DEPRECATED: This is plugin is no longer supported, please use the offical cordova splashscreen storyboard plugin: https://github.com/apache/cordova-plugin-splashscreen**
+
+# [DEPRECATED] cordova-plugin-launchscreen-storyboard
 A cordova plugin for using a launch screen storyboard as the splash screen instead of an image
 
 A common use case for this plugin is to control the default `CDVLaunchScreen` storyboard launch screen.
